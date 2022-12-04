@@ -6,8 +6,13 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import android.view.View
 import android.widget.Toast
+import androidx.constraintlayout.motion.widget.Key.VISIBILITY
 import kotlinx.android.synthetic.main.activity_add_new_todo_item.*
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 
 class addNewTodoItemActivity : AppCompatActivity() {
     companion object {
@@ -46,12 +51,30 @@ class addNewTodoItemActivity : AppCompatActivity() {
 
                 todoItem.toTitle = etTitle.text.toString()
                 todoItem.toDesc = etDesc.text.toString()
+                addTodoItemToServer()
+            }
+        }
+        return super.onOptionsItemSelected(item)
+    }
+
+    private fun addTodoItemToServer() {
+        progressBar.visibility = View.VISIBLE
+        MyApp.getInstance().getApiServices().addTodoItem().enqueue(object : Callback<ToDoItem> {
+            override fun onResponse(call: Call<ToDoItem>, response: Response<ToDoItem>) {
+                progressBar.visibility = View.GONE
                 val data = Intent()
                 data.putExtra(EXTRA_TODO_ITEM, todoItem)
                 setResult(Activity.RESULT_OK, data)
                 finish()
             }
-        }
-        return super.onOptionsItemSelected(item)
+
+            override fun onFailure(call: Call<ToDoItem>, t: Throwable) {
+                progressBar.visibility = View.GONE
+                Toast.makeText(
+                    this@addNewTodoItemActivity,
+                    "Failed to post, Bitch!!",
+                    Toast.LENGTH_LONG).show()
+            }
+        })
     }
 }

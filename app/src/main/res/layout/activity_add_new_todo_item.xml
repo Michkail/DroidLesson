@@ -7,6 +7,14 @@
     tools:context=".addNewTodoItemActivity"
     android:orientation="vertical">
 
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:indeterminate="true"
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:layout_height="wrap_content" />
+
     <EditText
         android:id="@+id/etTitle"
         android:layout_width="match_parent"
@@ -28,4 +36,5 @@
         android:inputType="textMultiLine"
         android:lines="4"
         android:hint="@string/desc" />
+
 </LinearLayout>

@@ -25,7 +25,10 @@ class MainActivity : AppCompatActivity() {
         super.onActivityResult(requestCode, resultCode, data)
         if (resultCode == Activity.RESULT_OK) {
             if (requestCode == addNewTodoItemActivity.REQUEST_CODE_ADD_TODO_ITEM) {
-                adapterTodoItem.addItem()
+                data?.let {
+                    val item = data.getParcelableExtra<ToDoItem>(addNewTodoItemActivity.EXTRA_TODO_ITEM)
+                    adapterTodoItem.addItem(item!!)
+                }
             }
         }
     }

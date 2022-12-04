@@ -7,8 +7,16 @@ import kotlinx.android.synthetic.main.listitem_todo.view.*
 
 class AdapterTodoItem : RecyclerView.Adapter<AdapterTodoItem.MyViewHolder>() {
     private val list = ArrayList<ToDoItem>()
-    inner class MyViewHolder(parent: ViewGroup) : RecyclerView.ViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.listitem_todo, parent, false)){
-        fun bind(todoItem: ToDoItem) = with(itemView){
+    inner class MyViewHolder(parent: ViewGroup) : RecyclerView.ViewHolder(
+        LayoutInflater.from(
+            parent.context
+        ).inflate(
+            R.layout.listitem_todo,
+            parent,
+            false
+        )
+    ) {
+        fun bind(todoItem: ToDoItem) = with(itemView) {
             textTitle.text = todoItem.toTitle
             textDescription.text = todoItem.toDesc
         }
@@ -21,7 +29,9 @@ class AdapterTodoItem : RecyclerView.Adapter<AdapterTodoItem.MyViewHolder>() {
     }
 
     override fun getItemCount() = list.size
-    fun addItem() {
-        TODO("Not yet implemented")
+
+    fun addItem(todoItem: ToDoItem) {
+        list.add(todoItem)
+        notifyItemInserted(list.size)
     }
 }

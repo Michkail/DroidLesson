@@ -19,10 +19,32 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a0de27ea-8281-440e-9814-3b02bf46a138" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/tdsoft/myapplication/AuthyApplication.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/tdsoft/myapplication/di/ApplicationModule.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/tdsoft/myapplication/di/RepositoryModule.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/tdsoft/myapplication/domain/usecases/LoginUseCase.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/tdsoft/myapplication/domain/usecases/RegisterUseCase.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/tdsoft/myapplication/network_data/AuthyApi.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/tdsoft/myapplication/network_data/requests/LoginRequest.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/tdsoft/myapplication/network_data/requests/RegisterRequest.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/tdsoft/myapplication/network_data/requests/UpdateProfileRequest.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/tdsoft/myapplication/network_data/response/LoginResponse.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/tdsoft/myapplication/network_data/response/RegisterResponse.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/tdsoft/myapplication/network_data/response/UpdateProfileResponse.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/tdsoft/myapplication/network_data/response/User.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/tdsoft/myapplication/util/Constants.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/tdsoft/myapplication/util/DataState.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/tdsoft/myapplication/util/Toast.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/tdsoft/myapplication/viewmodel/AuthViewModel.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.4/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.4/checksums/checksums.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.4/checksums/md5-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.4/checksums/md5-checksums.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.4/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.4/checksums/sha1-checksums.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.4/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.4/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/tdsoft/myapplication/MyApp.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/tdsoft/myapplication/MyApp.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,6 +77,9 @@
       <list>
         <option value="layoutResourceFile" />
         <option value="Interface" />
+        <option value="Kotlin Object" />
+        <option value="Kotlin File" />
+        <option value="Kotlin Sealed Interface" />
         <option value="Kotlin Interface" />
         <option value="Kotlin Class" />
       </list>
@@ -79,6 +104,9 @@
     "cidr.known.project.marker": "true",
     "node.js.detected.package.eslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
+    "project.structure.last.edited": "Dependencies",
+    "project.structure.proportion": "0.17",
+    "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "reference.settingsdialog.IDE.editor.colors.Color Scheme Font",
     "vue.rearranger.settings.migration": "true"
   }

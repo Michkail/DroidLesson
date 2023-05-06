@@ -10,7 +10,7 @@ class MyApp : Application() {
         fun  getInstance(): MyApp = instance
     }
 
-    private var retrofit: Retrofit = null
+    private var retrofit: Retrofit? = null
     override fun onCreate() {
         super.onCreate()
         instance = this
@@ -20,5 +20,5 @@ class MyApp : Application() {
             .build()
     }
 
-    fun getApiServices(): APIServices = retrofit!!.create(APIServices::class.java)
+    fun getApiServices(): APIServices? = retrofit?.create(APIServices::class.java)
 }
